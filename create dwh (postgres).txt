@@ -1,0 +1,114 @@
+
+
+CREATE TABLE dimfamily (
+    family_id VARCHAR(100) PRIMARY KEY,
+    father_name VARCHAR(200),
+    mother_name VARCHAR(200),
+    email VARCHAR(200),
+    contact_number VARCHAR(50),
+    address VARCHAR(300)
+);
+
+CREATE TABLE dimteacher (
+    teacher_id VARCHAR(100) PRIMARY KEY,
+    teacher_name VARCHAR(200),
+    phone VARCHAR(50),
+    hire_date DATE,
+    department VARCHAR(100),
+    effective_date DATE,
+    end_date DATE,
+    current_flag BOOLEAN
+);
+
+CREATE TABLE dimdate (
+    date_id DATE PRIMARY KEY,
+    full_date DATE,
+    day INTEGER,
+    month INTEGER,
+    year INTEGER
+);
+
+CREATE TABLE dimstudent (
+    student_id VARCHAR(100) PRIMARY KEY,
+    student_name VARCHAR(200),
+    gender VARCHAR(20),
+    grade VARCHAR(50),
+    city VARCHAR(100),
+    family_id VARCHAR(100),
+    effective_date DATE,
+    end_date DATE,
+    current_flag BOOLEAN,
+    CONSTRAINT fk_student_family FOREIGN KEY (family_id)
+        REFERENCES dimfamily(family_id)
+);
+
+CREATE TABLE dimcourse (
+    course_id VARCHAR(100) PRIMARY KEY,
+    course_name VARCHAR(200),
+    semester VARCHAR(50),
+    teacher_id VARCHAR(100),
+    effective_date DATE,
+    end_date DATE,
+    current_flag BOOLEAN,
+    CONSTRAINT fk_course_teacher FOREIGN KEY (teacher_id)
+        REFERENCES dimteacher(teacher_id)
+);
+
+CREATE TABLE dimcoursestudent (
+    course_student_id SERIAL PRIMARY KEY,
+    course_id VARCHAR(100),
+    student_id VARCHAR(100),
+    enrollment_date DATE,
+    completion_date DATE,
+    grade VARCHAR(10),
+    CONSTRAINT fk_cs_course FOREIGN KEY (course_id)
+        REFERENCES dimcourse(course_id),
+    CONSTRAINT fk_cs_student FOREIGN KEY (student_id)
+        REFERENCES dimstudent(student_id)
+);
+
+
+
+CREATE TABLE factattendance (
+    student_id VARCHAR(100),
+    course_id VARCHAR(100),
+    date_id DATE,
+    status BOOLEAN,
+    CONSTRAINT fk_att_student FOREIGN KEY (student_id)
+        REFERENCES dimstudent(student_id),
+    CONSTRAINT fk_att_course FOREIGN KEY (course_id)
+        REFERENCES dimcourse(course_id),
+    CONSTRAINT fk_att_date FOREIGN KEY (date_id)
+        REFERENCES dimdate(date_id)
+);
+
+CREATE TABLE factenrollment (
+    enrollment_id SERIAL PRIMARY KEY,
+    student_id VARCHAR(100),
+    course_id VARCHAR(100),
+    date_id DATE,
+    enrollment_date DATE,
+    CONSTRAINT fk_enr_student FOREIGN KEY (student_id)
+        REFERENCES dimstudent(student_id),
+    CONSTRAINT fk_enr_course FOREIGN KEY (course_id)
+        REFERENCES dimcourse(course_id),
+    CONSTRAINT fk_enr_date FOREIGN KEY (date_id)
+        REFERENCES dimdate(date_id)
+);
+
+CREATE TABLE factexam (
+    student_id VARCHAR(100),
+    course_id VARCHAR(100),
+    date_id DATE,
+    teacher_id VARCHAR(100),
+    score NUMERIC(5,2),
+    result_flag BOOLEAN,
+    CONSTRAINT fk_exam_student FOREIGN KEY (student_id)
+        REFERENCES dimstudent(student_id),
+    CONSTRAINT fk_exam_course FOREIGN KEY (course_id)
+        REFERENCES dimcourse(course_id),
+    CONSTRAINT fk_exam_date FOREIGN KEY (date_id)
+        REFERENCES dimdate(date_id),
+    CONSTRAINT fk_exam_teacher FOREIGN KEY (teacher_id)
+        REFERENCES dimteacher(teacher_id)
+);
