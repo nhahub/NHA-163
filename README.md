@@ -228,7 +228,7 @@ Together, the dashboard, data model, and DAX logic create a seamless analytical 
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| **Abdelrahman Mohamed Fathi** | Team Leader | Coordination, planning, tracking progress |
+| **Abdelrahman Mohamed Fathi** | Team Leader | Coordination, Power BI dashboards, tracking progress |
 | **Sabry Tarek Sabry** | PySpark ETL Developer & Docker Lead | Data processing, containerized environments |
 | **Ahmed Osama Ahmed** | SQL Database Architect | Data modeling, warehouse design |
 | **Ahmed Moustafa Mahmoud** | Data Visualization Developer | Power BI dashboards & analytics |
