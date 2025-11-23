@@ -61,7 +61,6 @@ This system becomes the **single source of truth** for academic performance, hel
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white)
 
 ---
 
@@ -128,7 +127,9 @@ This modeling structure ensures:
 ![Image](https://github.com/user-attachments/assets/6d0ad09a-bea6-41c7-b91f-17b0bb5cca85)
 
 <img width="1601" height="1460" alt="Image" src="https://github.com/user-attachments/assets/0e4b0383-9309-4e11-af52-b02c56812787" />
----
+
+--- 
+
 
 # 🌟 **Key Features of the Dashboard**
 
@@ -216,8 +217,6 @@ To enable accurate insights, several DAX measures were created, including:
 - **Customized grade assignment logic** for visualization consistency  
 
 These DAX expressions ensured that KPIs and visuals respond instantly to filters, slicers, and drill-down interactions without breaking model integrity.
-
----
 
 Together, the dashboard, data model, and DAX logic create a seamless analytical experience—allowing educators to explore high-level trends and drill into individual student stories with ease.
 
