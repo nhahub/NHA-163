@@ -1,6 +1,11 @@
-# 🎓 **StudentSight**  ## ![Image](https://github.com/user-attachments/assets/11c9bf01-dd06-4f01-a29e-9eb54f80a998)
-### **Student Performance Analytics Dashboard**  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/11c9bf01-dd06-4f01-a29e-9eb54f80a998" width="90" alt="StudentSight Logo"/>
+</p>
+
+# 🎓 **StudentSight**
+### **Student Performance Analytics Dashboard**
 > *A complete end-to-end educational data pipeline empowering data-driven decisions in schools.*
+
 
 ---
 
