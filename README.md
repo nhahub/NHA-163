@@ -12,7 +12,7 @@
 # 📘 **Project Overview**
 
 StudentSight is a full analytical ecosystem designed to transform raw, unstructured student performance data into clear, actionable insights.  
-Using a pipeline powered by **PySpark**, **SQL databases**, **Docker**, and **Power BI**, the project centralizes performance records, cleans and standardizes the data, builds a structured analytical warehouse, and visualizes the results through an interactive dashboard.
+Using a pipeline powered by **PySpark**, **SQL databases**, **postgresql**, **Docker**, and **Power BI**, the project centralizes performance records, cleans and standardizes the data, builds a structured analytical warehouse, and visualizes the results through an interactive dashboard.
 
 The final platform helps teachers, administrators, and stakeholders monitor academic performance, identify struggling students early, and make informed, data-driven decisions.
 
