@@ -232,7 +232,7 @@ Together, the dashboard, data model, and DAX logic create a seamless analytical 
 | **Ahmed Osama Ahmed** | SQL Database Architect | Data modeling, warehouse design |
 | **Ahmed Moustafa Mahmoud** | Data Visualization Developer | Power BI dashboards & analytics |
 | **Esraa Mahmoud Abdelrahman** | Documentation & Presentation | Final report & content curation & analytics support |
-| **Yasser Elsayed Mohamed** | Documentation Support | Editing, structure & slide preparation |
+
 
 ---
 
